@@ -1,0 +1,2 @@
+# AndroidNativeTestCodes
+native test codes
