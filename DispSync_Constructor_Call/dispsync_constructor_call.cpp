@@ -18,9 +18,23 @@ DispSync::~DispSync() {
     cout << "default destructor is called!" << endl;
 }
 
+class SurfaceFlinger {
+public:
+    SurfaceFlinger();
+
+private:
+    DispSync mPrimaryDispSync;    
+};
+
+SurfaceFlinger::SurfaceFlinger() : mPrimaryDispSync("PrimaryDispSync") {
+
+}
+
 int main(int argc, char** argv) {
 
-    DispSync mPrimaryDispSync;
+    // DispSync mPrimaryDispSync;
+
+    SurfaceFlinger* sf = new SurfaceFlinger();
 
     return 0;
 }
